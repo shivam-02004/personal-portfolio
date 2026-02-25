@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shivam Chauhan — Frontend Developer Portfolio. Building responsive, beautiful web experiences.">
+<title>Shivam Chauhan · Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── CURSOR ── -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ── LOADER ── -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">SC</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-text">Initialising portfolio...</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollTo('#contact')">Hire Me →</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <canvas id="particleCanvas"></canvas>
+  </div>
+  <div class="hero-grid-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-chip" data-reveal>
+      <span class="chip-dot"></span> Available for opportunities
+    </div>
+    <h1 class="hero-name" data-reveal data-delay="100">
+      Shivam<br><em>Chauhan</em>
+    </h1>
+    <div class="hero-typewriter" data-reveal data-delay="200">
+      <span class="tw-prefix">I build </span>
+      <span class="tw-text" id="typewriter"></span>
+      <span class="tw-cursor">|</span>
+    </div>
+    <p class="hero-bio" data-reveal data-delay="300">
+      Frontend Developer & B.Tech IT student at SRMCEM, Lucknow. Passionate about crafting responsive, accessible, and visually compelling web experiences that delight users.
+    </p>
+    <div class="hero-actions" data-reveal data-delay="400">
+      <a href="#projects" class="btn-primary">
+        <span>See My Work</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn-outline">Let's Talk</a>
+      <a href="php/download-cv.php" class="btn-ghost" download>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        CV
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-stats" data-reveal data-delay="500">
+    <div class="stat-item">
+      <div class="stat-num">5<span>+</span></div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-label">IBM Internships</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num">8<span>+</span></div>
+      <div class="stat-label">Technologies</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num">2026</div>
+      <div class="stat-label">Graduating</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left" data-reveal>
+        <div class="section-chip">About Me</div>
+        <h2 class="section-title">Crafting Digital<br><em>Experiences</em></h2>
+        <p class="about-text">
+          I'm a passionate Frontend Developer and B.Tech Information Technology student at SRMCEM Lucknow, expected to graduate in 2026. I thrive at the intersection of clean code and beautiful design — building products that don't just work, but <em>feel right</em>.
+        </p>
+        <p class="about-text">
+          My journey started with curiosity about how websites work, and quickly turned into a deep love for HTML, CSS, and the magic of JavaScript. I've since expanded into PHP backends, MySQL databases, and modern frameworks like React — always chasing that perfect user experience.
+        </p>
+        <p class="about-text">
+          I've had the privilege of interning twice at <strong>IBM Cloud</strong> — once in Software Development and once in Data Analytics — giving me a strong foundation in both engineering and data-driven thinking.
+        </p>
+        <div class="about-tags">
+          <span class="tag">📍 Lucknow, Uttar Pradesh</span>
+          <span class="tag">🎓 B.Tech IT · 2026</span>
+          <span class="tag">☁️ IBM Intern × 2</span>
+          <span class="tag">💻 Open to Work</span>
+        </div>
+      </div>
+      <div class="about-right" data-reveal data-delay="200">
+        <div class="about-card-big">
+          <div class="acb-icon">👨‍💻</div>
+          <div class="acb-code">
+            <div class="code-line"><span class="c-key">const</span> <span class="c-var">shivam</span> = {</div>
+            <div class="code-line pl">  <span class="c-key">role</span>: <span class="c-str">"Frontend Developer"</span>,</div>
+            <div class="code-line pl">  <span class="c-key">location</span>: <span class="c-str">"Lucknow, IN"</span>,</div>
+            <div class="code-line pl">  <span class="c-key">passion</span>: <span class="c-str">"Beautiful UX"</span>,</div>
+            <div class="code-line pl">  <span class="c-key">available</span>: <span class="c-bool">true</span>,</div>
+            <div class="code-line pl">  <span class="c-key">coffee</span>: <span class="c-str">"always ☕"</span></div>
+            <div class="code-line">};</div>
+          </div>
+        </div>
+        <div class="about-mini-cards">
+          <div class="mini-card">
+            <span class="mc-icon">⚡</span>
+            <div class="mc-label">Fast Learner</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-icon">🎯</span>
+            <div class="mc-label">Detail-Oriented</div>
+          </div>
+          <div class="mini-card">
+            <span class="mc-icon">🤝</span>
+            <div class="mc-label">Team Player</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SKILLS
+══════════════════════════════════════ -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <div class="section-chip">What I Know</div>
+      <h2 class="section-title">Skills & <em>Technologies</em></h2>
+      <p class="section-sub">Tools I use to bring ideas to life</p>
+    </div>
+    <div class="skills-tabs" data-reveal data-delay="100">
+      <button class="skill-tab active" data-filter="all">All</button>
+      <button class="skill-tab" data-filter="Frontend">Frontend</button>
+      <button class="skill-tab" data-filter="Backend">Backend</button>
+      <button class="skill-tab" data-filter="Language">Languages</button>
+      <button class="skill-tab" data-filter="Tools">Tools</button>
+    </div>
+    <div class="skills-grid" id="skillsGrid" data-reveal data-delay="200">
+      <!-- Populated by JS from PHP API -->
+      <div class="skills-loading">Loading skills...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════ -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <div class="section-chip">What I've Built</div>
+      <h2 class="section-title">Featured <em>Projects</em></h2>
+      <p class="section-sub">From full-stack systems to polished clones</p>
+    </div>
+    <div class="projects-grid" id="projectsGrid" data-reveal data-delay="100">
+      <!-- Populated by JS from PHP API -->
+      <div class="projects-loading">Loading projects...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     EXPERIENCE + EDUCATION
+══════════════════════════════════════ -->
+<section id="experience" class="section exp-section">
+  <div class="container">
+    <div class="exp-edu-grid">
+      <!-- EXPERIENCE -->
+      <div data-reveal>
+        <div class="section-chip">Where I've Worked</div>
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline" id="expTimeline">
+          <div class="tl-loading">Loading...</div>
+        </div>
+      </div>
+      <!-- EDUCATION -->
+      <div data-reveal data-delay="200">
+        <div class="section-chip">Education</div>
+        <h2 class="section-title">Academic<em> Journey</em></h2>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <div class="edu-degree">B.Tech — Information Technology</div>
+              <div class="edu-school">SRMCEM, Lucknow</div>
+              <div class="edu-year">2022 – 2026</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">📚</div>
+            <div class="edu-info">
+              <div class="edu-degree">12th Grade (PCM)</div>
+              <div class="edu-school">Lucknow Public School, Vrindavan Yojana</div>
+              <div class="edu-year">2020 – 2022 &nbsp;·&nbsp; 61.6%</div>
+            </div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-icon">🏫</div>
+            <div class="edu-info">
+              <div class="edu-degree">10th Grade</div>
+              <div class="edu-school">Lucknow Public School, Vrindavan Yojana</div>
+              <div class="edu-year">2018 – 2020 &nbsp;·&nbsp; 61.16%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="section contact-section">
+  <div class="contact-bg-shape"></div>
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <div class="section-chip">Get In Touch</div>
+      <h2 class="section-title">Let's Build Something<br><em>Together</em></h2>
+      <p class="section-sub">I'm actively seeking internships and full-time roles. Drop me a message!</p>
+    </div>
+
+    <div class="contact-grid" data-reveal data-delay="100">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-info-card">
+          <div class="ci-item">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <a class="ci-value" href="mailto:sshivamchauhan123@gmail.com">sshivamchauhan123@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📞</div>
+            <div>
+              <div class="ci-label">Phone</div>
+              <a class="ci-value" href="tel:+917500000849">+91 75000 00849</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <div class="ci-label">Location</div>
+              <span class="ci-value">Lucknow, Uttar Pradesh — 226002</span>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">💼</div>
+            <div>
+              <div class="ci-label">LinkedIn</div>
+              <a class="ci-value" href="https://www.linkedin.com/in/shivam-chauhan-135183305" target="_blank">shivam-chauhan-135183305</a>
+            </div>
+          </div>
+          <div class="ci-status">
+            <span class="ci-dot"></span> Open to new opportunities
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <span class="form-err" id="err-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            <span class="form-err" id="err-email"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Internship opportunity / Project inquiry" required>
+          <span class="form-err" id="err-subject"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Shivam, I'd love to..." required></textarea>
+          <span class="form-err" id="err-message"></span>
+          <span class="char-count" id="charCount">0 / 5000</span>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span id="submitText">Send Message</span>
+          <svg id="submitIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div class="form-feedback" id="formFeedback"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </div>
+    <p class="footer-copy">© 2025 Shivam Chauhan · Built with ❤️ in Lucknow, India</p>
+    <div class="footer-links">
+      <a href="mailto:sshivamchauhan123@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/shivam-chauhan-135183305" target="_blank">LinkedIn</a>
+      <a href="#home">↑ Top</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Project Detail Modal -->
+<div class="modal-overlay" id="projectModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
